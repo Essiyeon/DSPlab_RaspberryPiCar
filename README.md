@@ -34,3 +34,20 @@ tesseract [파이썬에서 pytesseract를 사용하여 문자 인식 ( OCR ) 하
 Reference code [Optical Character Recognition Using Raspberry Pi With OpenCV and Tesseract](https://maker.pro/raspberry-pi/tutorial/optical-character-recognizer-using-raspberry-pi-with-opencv-and-tesseract)  
 + [OCR With OpenCV and Tesseract on Raspberry Pi](https://www.youtube.com/watch?v=efHYZ-Fcfmw)  
 
+___
+
+## index preview
+  
+  
+index1![index1](https://user-images.githubusercontent.com/100012844/160237169-e3f72326-a2b9-4973-b118-eaa0d8cb86cf.png)  
+index2![index2](https://user-images.githubusercontent.com/100012844/160237180-368c203a-0f67-4c87-aaaa-8c82cc28885d.png)  
+index3![index3](https://user-images.githubusercontent.com/100012844/160237194-6b258e95-88e8-49b7-a07b-a16d6b3f9089.png)  
+index4![index4](https://user-images.githubusercontent.com/100012844/160237203-58a46880-c086-4fe6-a08f-c82a284227d3.png)  
+index5![index5](https://user-images.githubusercontent.com/100012844/160237206-9c1103c4-4904-4027-b3c7-4caa9d291c2b.png)  
+
+
+
+
+
+
+
