@@ -1,6 +1,7 @@
 ## Motor controll with PWM
-## Å°º¸µå·Î ÀÔ·ÂÀ» ¹Ş¾Æ 1ÀÌ¸é Á¤Áö(manual mode±¸ÇöÀ»À§ÇÑ)
-## 2ÀÌ¸é auto mode ·Î µ¿ÀÛ ÃÊÀ½ÆÄ°Å¸®ÃøÁ¤¼¾¼­·Î 15cm ÀÌ³»¿¡ Àå¾Ö¹°ÀÌ ÀÖ´Â °æ¿ì ¸ØÃã
+## í‚¤ë³´ë“œë¡œ ì…ë ¥ì„ ë°›ì•„ 1ì´ë©´ ì •ì§€(manual modeêµ¬í˜„ì„ìœ„í•œ)
+## 2ì´ë©´ auto mode ë¡œ ë™ì‘ ì´ˆìŒíŒŒê±°ë¦¬ì¸¡ì •ì„¼ì„œë¡œ 15cm ì´ë‚´ì— ì¥ì• ë¬¼ì´ ìˆëŠ” ê²½ìš° ë©ˆì¶¤
+## í‚¤ë³´ë“œ ì¸í„°ëŸ½íŠ¸ ì´í›„ì— ë‹¤ì‹œ ì…ë ¥ê°’ì„ ë°›ìŒ
 
 import RPi.GPIO as GPIO
 import time
@@ -8,24 +9,24 @@ import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
-# ¸ğÅÍ Ã¤³Î
+# ëª¨í„° ì±„ë„
 CH1 = 0
 CH2 = 1
 
-# ¸ğÅÍ »óÅÂ
+# ëª¨í„° ìƒíƒœ
 STOP  = 0
 FORWARD  = 1
 BACKWORD = 2
 
-# PIN ÀÔÃâ·Â ¼³Á¤
+# PIN ì…ì¶œë ¥ ì„¤ì •
 OUTPUT = 1
 INPUT = 0
 
-# PIN ¼³Á¤
+# PIN ì„¤ì •
 HIGH = 1
 LOW = 0
 
-# ½ÇÁ¦ ÇÉ Á¤ÀÇ
+# ì‹¤ì œ í•€ ì •ì˜
 #PWM PIN
 ENA = 26  #37 pin
 ENB = 0   #27 pin
@@ -40,7 +41,7 @@ Echo = 24
 
 GPIO.setwarnings(False)
 
-# GPIO ¸ğµå ¼³Á¤ 
+# GPIO ëª¨ë“œ ì„¤ì • 
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(Trig, GPIO.OUT) #Trig
@@ -57,39 +58,39 @@ pwmA.start(0)
 pwmB=GPIO.PWM(ENB,100)
 pwmB.start(0)
 
- # ¸ğÅÍ Á¦¾îÇÔ¼ö °£´ÜÇÏ°Ô »ç¿ëÇÏ±â À§ÇØ ÇÑ¹ø´õ ·¡ÇÎ(°¨½Ó)
+ # ëª¨í„° ì œì–´í•¨ìˆ˜ ê°„ë‹¨í•˜ê²Œ ì‚¬ìš©í•˜ê¸° ìœ„í•´ í•œë²ˆë” ë˜í•‘(ê°ìŒˆ)
 def setMotor(ch, speed, stat):
     if ch == CH1:
-        #¸ğÅÍ ¼Óµµ Á¦¾î PWM
+        #ëª¨í„° ì†ë„ ì œì–´ PWM
         pwmA.ChangeDutyCycle(speed)  
     
         if stat == FORWARD:
             GPIO.output(IN1, LOW)
             GPIO.output(IN2, HIGH)
         
-        #µÚ·Î
+        #ë’¤ë¡œ
         elif stat == BACKWORD:
             GPIO.output(IN1, HIGH)
             GPIO.output(IN2, LOW)
         
-        #Á¤Áö
+        #ì •ì§€
         elif stat == STOP:
             GPIO.output(IN1, LOW)
             GPIO.output(IN2, LOW)
     else:
-        #¸ğÅÍ ¼Óµµ Á¦¾î PWM
+        #ëª¨í„° ì†ë„ ì œì–´ PWM
         pwmB.ChangeDutyCycle(speed)  
     
         if stat == FORWARD:
             GPIO.output(IN3, LOW)
             GPIO.output(IN4, HIGH)
         
-        #µÚ·Î
+        #ë’¤ë¡œ
         elif stat == BACKWORD:
             GPIO.output(IN3, HIGH)
             GPIO.output(IN4, LOW)
         
-        #Á¤Áö
+        #ì •ì§€
         elif stat == STOP:
             GPIO.output(IN3, LOW)
             GPIO.output(IN4, LOW)
@@ -111,15 +112,15 @@ while True:
             time.sleep(0.001)
             GPIO.output(Trig, False)
 
-            # 18¹øÀÌ OFF°¡ µÇ´Â ½ÃÁ¡À» ½ÃÀÛ½Ã°£À¸·Î ¼³Á¤
+            # 18ë²ˆì´ OFFê°€ ë˜ëŠ” ì‹œì ì„ ì‹œì‘ì‹œê°„ìœ¼ë¡œ ì„¤ì •
             while GPIO.input(Echo) == 0:
                 start = time.time()
                     
-            # 18¹øÀÌ ONÀÌ µÇ´Â ½ÃÁ¡À» ¹İ»çÆÄ ¼ö½Å½Ã°£À¸·Î ¼³Á¤
+            # 18ë²ˆì´ ONì´ ë˜ëŠ” ì‹œì ì„ ë°˜ì‚¬íŒŒ ìˆ˜ì‹ ì‹œê°„ìœ¼ë¡œ ì„¤ì •
             while GPIO.input(Echo) == 1:
                 stop = time.time()
                     
-            # ÃÊÀ½ÆÄ°¡ µÇµ¹¾Æ¿À´Â ½Ã°£Â÷·Î °Å¸®¸¦ °è»êÇÑ´Ù
+            # ì´ˆìŒíŒŒê°€ ë˜ëŒì•„ì˜¤ëŠ” ì‹œê°„ì°¨ë¡œ ê±°ë¦¬ë¥¼ ê³„ì‚°í•œë‹¤
             time_interval = stop - start
             distance = time_interval * 17000
             distance = round(distance, 2)
