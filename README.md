@@ -37,13 +37,14 @@ Reference code [Optical Character Recognition Using Raspberry Pi With OpenCV and
 ___
 
 ## index preview
-  
-  
-index1![index1](https://user-images.githubusercontent.com/100012844/160237169-e3f72326-a2b9-4973-b118-eaa0d8cb86cf.png)  
-index2![index2](https://user-images.githubusercontent.com/100012844/160237180-368c203a-0f67-4c87-aaaa-8c82cc28885d.png)  
-index3![index3](https://user-images.githubusercontent.com/100012844/160237194-6b258e95-88e8-49b7-a07b-a16d6b3f9089.png)  
-index4![index4](https://user-images.githubusercontent.com/100012844/160237203-58a46880-c086-4fe6-a08f-c82a284227d3.png)  
-index5![index5](https://user-images.githubusercontent.com/100012844/160237206-9c1103c4-4904-4027-b3c7-4caa9d291c2b.png)  
+
+index|preview
+-----|------
+index1|<img src="https://user-images.githubusercontent.com/100012844/160237684-60365cc5-fd0b-4521-b965-becccc194893.png" width="380px" height="430px"></img>
+index2|<img src="https://user-images.githubusercontent.com/100012844/160237764-5900bd2b-17eb-478e-ab81-25777202bc1b.png" width="380px" height="430px"></img>
+index3|<img src="https://user-images.githubusercontent.com/100012844/160237767-c10de572-01b6-4610-aad0-3f6a98185860.png" width="380px" height="430px"></img>
+index4|<img src="https://user-images.githubusercontent.com/100012844/160237768-7d85b5e8-1042-4e69-a29e-315380759b98.png" width="380px" height="430px"></img>
+index5|<img src="https://user-images.githubusercontent.com/100012844/160237770-8b9619bf-360d-45a4-af13-da448f5512bc.png" width="380px" height="430px"></img>
 
 
 
