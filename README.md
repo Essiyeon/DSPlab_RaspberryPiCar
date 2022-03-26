@@ -5,6 +5,7 @@ Raspberry Pi Car with Pi Camera, Ultrasonic Sensor
 **function** : manual mode - Driving the RC car through the website  
                automatic mode - basically go forward, Stop if there is an obstacle within 15cm (Ultrasonic Sensor HC-SR04)  
                If you press the capture button, a picture is taken, and the text in the picture is recognized and moved according to the text. (openCV, tesseract)
+**problem** : Unable to return to manual mode from automatic mode. It is presumed that it is probably not possible to exit the while statement.
   
 [미완성]  
   **목표** : 라즈베리파이를 이용한 RC카 구동  
@@ -12,7 +13,9 @@ Raspberry Pi Car with Pi Camera, Ultrasonic Sensor
   수동모드 - 웹사이트에 방향키를 두어 조작  
   자동모드 - 전진을 기본으로 하여 15cm 이내에 장애물이 감지되는 경우 멈춤 (초음파거리측정센서 이용)  
   캡처버튼을 누르면 사진이 찍히고 사진의 문자를 추출하여 방향을 전환하도록 함 (파이카메라와 openCV, tesseract 이용)  
-  
+
+**문제점** : 자동모드에서 수동모드로 전환시에 모터가 멈추지않음. 자동모드의 무한 반복문을 빠져나오는 것으로 추정  
+~~여러방법을 시도해봤으나 해결방법을 찾지못함 이 과정에서 index파일과 코드파일이 늘어남..~~
 ___
 
 ## *motor_base.py* - motor controll with PWM  
@@ -30,7 +33,4 @@ Install openCV [Raspberry Pi 4에 Extra Module(contrib) 포함하여 OpenCV 4.5.
 tesseract [파이썬에서 pytesseract를 사용하여 문자 인식 ( OCR ) 하기](https://webnautes.tistory.com/947?category=760410)  
 Reference code [Optical Character Recognition Using Raspberry Pi With OpenCV and Tesseract](https://maker.pro/raspberry-pi/tutorial/optical-character-recognizer-using-raspberry-pi-with-opencv-and-tesseract)  
 + [OCR With OpenCV and Tesseract on Raspberry Pi](https://www.youtube.com/watch?v=efHYZ-Fcfmw)  
-
-___
-
 
